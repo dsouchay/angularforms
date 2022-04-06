@@ -11,12 +11,12 @@
     </div>
   </div>
 
-  <!-- Agregar faforitos -->
+  <!-- Agregar favoritos -->
   <div class="mb-3 row">
     <label for="" class="col-sm-3 col-form-label">Favoritos</label>
     <div class="col-sm-9">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Agregar Favoritos" required [(ngModel)]="nuevoJuego" name="nuevoJuego">
+        <input type="text" class="form-control" placeholder="Agregar Favoritos" [(ngModel)]="nuevoJuego" name="nuevoJuego" (keyup.enter)="agregarJuego();">
         <button class="btn btn-outline-primary" type="button" (click)="agregarJuego()">Agregar</button>
 
       </div>
@@ -43,5 +43,7 @@
   </div>
 </form>
 
+<span>Invalid</span>
+<pre>{{miFormulario.invalid}}</pre>
 <span>Persona</span>
 <pre>{{persona | json }}</pre>

@@ -38,17 +38,19 @@ export class DinamicosComponent {
       id:this.persona.favoritos.length+1,
       nombre: this.nuevoJuego,
     }
-    this.persona.favoritos.push(nuevoFavorito);
+    if (this.nuevoJuego){
+          this.persona.favoritos.push(nuevoFavorito);
+
+    }
     this.nuevoJuego = '';
-
-
   }
 
   guardar(){
     console.log('posteado',this.persona.favoritos.length,this.miFormulario.value.nombre)
   }
+
   eliminar(i:number){
     this.persona.favoritos.splice(i, 1);
-}
+  }
 
 }

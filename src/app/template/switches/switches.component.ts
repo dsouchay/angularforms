@@ -15,6 +15,10 @@ export class SwitchesComponent {
 
   terminosYCondiciones:boolean=true;
 
+  guardar(){
+    console.log(this.persona);
+  }
+
 
 
 }
